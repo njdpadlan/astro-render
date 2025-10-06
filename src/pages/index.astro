@@ -34,9 +34,16 @@ const aboutData = pageData.find(pd => pd.__component === "about.about") || {};
 const { aboutText } = aboutData;
 
 
-const aboutPhoto = aboutData?.aboutPhoto?.url || "";
-const altText = aboutData?.aboutPhoto?.alternativeText || "";
-;
+const { aboutPhoto: {
+	url: aboutPhoto
+}} = aboutData;
+
+const { aboutPhoto: {
+	alternativeText: altText
+}} = aboutData;
+
+// const aboutPhoto = aboutData?.aboutPhoto?.url || "";
+// const altText = aboutData?.aboutPhoto?.alternativeText || "";
 ---
 
 <Layout>
